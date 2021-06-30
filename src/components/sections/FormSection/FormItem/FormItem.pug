@@ -1,0 +1,12 @@
+include /components/ui/Input/Input
+
+mixin FormItem({title, inputList})
+  - const B = `form`;
+
+  div(class=`${B}`)&attributes(attributes)
+    h3(class=`${B}__title`) #{ title }
+
+    ul(class=`${B}__list`)
+      each item in inputList
+        li(class=`${B}__item`)
+          +Input(item)

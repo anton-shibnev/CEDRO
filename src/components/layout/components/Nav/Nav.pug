@@ -1,0 +1,10 @@
+include /components/ui/Container/Container
+
+mixin Nav(list)
+  - const B = `nav`;
+
+  +Outer(B, B, 'nav')&attributes(attributes)
+    ul(class=`${B}__list`)
+      each item, index in list
+        li(class=`${B}__item ${item.mod ? `${B}__item--${item.mod}` : ''}`)
+          a(class=`${B}__item-link ${!index ? `${B}__item-link--active` : ''}`) #{ item.label }

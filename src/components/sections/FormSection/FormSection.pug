@@ -1,0 +1,14 @@
+include /components/ui/Btn/Btn
+include /components/ui/Outer/Outer
+include FormItem/FormItem
+
+mixin FormSection({ title, formList, btn })
+  - const B = 'form-section';
+
+  +Outer(B, B, 'section')
+    h1(class=`${B}__title`) #{ title }
+
+    form(class=`${B}__form`)
+      each form in formList
+        +FormItem(form)(class=`${B}__form-item`)
+      +Btn(btn)(class=`${B}__form-btn`)

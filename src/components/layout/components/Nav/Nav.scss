@@ -1,0 +1,49 @@
+.nav {
+  $this: &;
+
+  @include _(
+    (
+      border-bottom: 1px solid $grey-2,
+    )
+  );
+
+  @include bem(
+    'list',
+    (
+      '@extend': '%list-reset',
+      display: flex,
+      gap: 16px,
+      padding-top: (
+        'mob': 7px,
+      ),
+      padding-bottom: (
+        'mob': 8px,
+      ),
+    )
+  );
+
+  @include bem(
+    'item',
+    (
+      '&--exit': (
+        margin-left: (
+          'mob': auto,
+        ),
+      ),
+    )
+  );
+
+  @include bem(
+    'item-link',
+    (
+      text-transform: uppercase,
+      font-weight: 500,
+      font-size: 14px,
+      line-height: 24px,
+      letter-spacing: 0.04em,
+      '&--active': (
+        color: $primary !important,
+      ),
+    )
+  );
+}

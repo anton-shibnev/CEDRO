@@ -1,0 +1,31 @@
+@import 'swiper/swiper-bundle.css';
+
+.offer-slider {
+  $this: &;
+
+  @include _(
+    (
+      overflow: hidden,
+      padding-left: 16px,
+      padding-right: 16px,
+    )
+  );
+
+  @include bem(
+    'wrap',
+    (
+      width: (
+        'mob': 255px,
+      ),
+    )
+  );
+
+  @include bem(
+    'swiper-container',
+    (
+      overflow: visible,
+    )
+  );
+
+  @include bem('swiper-wrapper', ());
+}

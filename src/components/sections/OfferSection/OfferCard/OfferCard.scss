@@ -1,0 +1,138 @@
+.offer-card {
+  $this: &;
+
+  @include _(
+    (
+      position: relative,
+      overflow: hidden,
+      border-radius: 8px,
+      background-color: $grey,
+      height: 403px,
+    )
+  );
+
+  @include bem(
+    'link',
+    (
+      '@extend': '%spread',
+    )
+  );
+
+  @include bem(
+    'like',
+    (
+      '@extend': '%btn-reset',
+      '@wh': (
+        'mob': (
+          21px,
+          18px,
+        ),
+      ),
+      position: absolute,
+      top: 20px,
+      right: 16px,
+    )
+  );
+
+  @include bem(
+    'chip',
+    (
+      background-color: $danger,
+      color: $white,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      width: max-content,
+      padding: (
+        'mob': 4px 12px 6px,
+      ),
+      border-radius: 100px,
+      font-weight: normal,
+      font-size: 14px,
+      line-height: 18px,
+      position: absolute,
+      top: 16px,
+      left: 16px,
+    )
+  );
+
+  @include bem(
+    'pic',
+    (
+      width: 100%,
+      height: 255px,
+    )
+  );
+
+  @include bem(
+    'line',
+    (
+      margin: 0,
+      height: 12px !important,
+      background-color: $secondary,
+      opacity: 1,
+    )
+  );
+
+  @include bem(
+    'data',
+    (
+      padding: 16px,
+    )
+  );
+
+  @include bem(
+    'title',
+    (
+      font-family: $font-second,
+      font-style: italic,
+      font-weight: 500,
+      font-size: 18px,
+      line-height: 18px,
+    )
+  );
+
+  @include bem(
+    'desc',
+    (
+      margin-top: 8px,
+      font-weight: normal,
+      font-size: 14px,
+      line-height: 18px,
+    )
+  );
+
+  @include bem(
+    'volume',
+    (
+      margin-top: 8px,
+      font-weight: normal,
+      font-size: 14px,
+      line-height: 18px,
+    )
+  );
+
+  @include bem(
+    'wrap-price',
+    (
+      display: flex,
+      gap: 9px,
+      margin-top: 16px,
+    )
+  );
+
+  @include bem(
+    'price',
+    (
+      font-family: $font-second,
+      font-style: italic,
+      font-weight: 500,
+      font-size: 18px,
+      line-height: 18px,
+      '&--old': (
+        color: $grey-text,
+        text-decoration: line-through,
+      ),
+    )
+  );
+}

@@ -1,0 +1,13 @@
+include /components/ui/Pic/Pic
+include ../OfferCard/OfferCard
+
+mixin OfferSlider(list)
+  - const B = `offer-slider`;
+
+  div(class=`${B}`)&attributes(attributes)
+    div(class=`${B}__wrap`)
+      div(id=`offerSlider` class=`${B}__swiper-container swiper-container`)
+        div(class=`swiper-wrapper ${B}__swiper-wrapper`)
+          each item in list
+            div(class=`swiper-slide ${B}__slide`)
+              +OfferCard(item)(class=`${B}__card`)

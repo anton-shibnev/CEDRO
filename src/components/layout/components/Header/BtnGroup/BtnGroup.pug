@@ -1,0 +1,14 @@
+include /components/ui/Icon/Icon
+
+mixin BtnGroup(list, tel)
+  - const B = `btn-group`;
+
+  ul(class=`${B}` id=`${B}`)&attributes(attributes)
+    li(class=`${B}__item ${B}__item--phone`)
+      a(class=`${B}__tel` href=`tel:${tel.num}`)
+        +Icon(tel.icon)(class=`${B}__tel-icon`) #{ tel.num }
+
+    each item in list
+      li(class=`${B}__item`)
+        button(class=`${B}__btn`)
+          +Icon(item.icon)(class=`${B}__btn-icon`)

@@ -1,0 +1,53 @@
+.burger {
+  $this: &;
+
+  @include _(
+    (
+      '@extend': '%btn-reset',
+      'width': (
+        'mob': 20px,
+        'xs': 36px,
+      ),
+      gap: (
+        'mob': 4px,
+      ),
+      display: flex,
+      flex-direction: column,
+      position: relative,
+      z-index: 120,
+    )
+  );
+
+  &--active {
+    #{$this}__line {
+      width: 100% !important;
+
+      &:nth-child(1) {
+        transform: rotate(-135deg) translate(-15%, -300%);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(135deg) translate(-15%, 300%);
+      }
+    }
+  }
+
+  @include bem(
+    'line',
+    (
+      '@transition': (
+        background-color,
+        opacity,
+        transform,
+        width,
+      ),
+      background-color: $dark,
+      display: block,
+      width: 100%,
+      height: (
+        'mob': 2px,
+        'xs': 3.65px,
+      ),
+    )
+  );
+}

@@ -1,0 +1,262 @@
+{
+  "head": {
+    "title": "title - index",
+    "description": "description - index"
+  },
+  "header": {
+    "title": "header title",
+    "tel": {
+      "num": "8 (800) 555-35-35",
+      "icon": "tel"
+    },
+    "btnGroup": [
+      {
+        "icon": "search",
+        "id": "search"
+      },
+      {
+        "icon": "heart",
+        "id": "heart"
+      },
+      {
+        "icon": "market",
+        "id": "market"
+      },
+      {
+        "icon": "user",
+        "id": "user"
+      }
+    ],
+    "nav": [
+      {
+        "label": "О нас",
+        "href": "#"
+      },
+      {
+        "label": "Галерея",
+        "href": "#"
+      },
+      {
+        "label": "Каталог",
+        "href": "#"
+      },
+      {
+        "label": "События",
+        "href": "#"
+      },
+      {
+        "label": "Издания",
+        "href": "#"
+      },
+      {
+        "label": "Проекты",
+        "href": "#"
+      },
+      {
+        "label": "Контакты",
+        "href": "#"
+      }
+    ],
+    "btn": {
+      "label": "Войти",
+      "icon": "sign-in"
+    }
+  },
+  "nav": [
+    { "label": "Профиль", "href": "#" },
+    { "label": "Мои заказы", "href": "#" },
+    { "label": "выход", "href": "#", "mod": "exit" }
+  ],
+  "footer": {
+    "socList": [
+      {
+        "href": "#",
+        "icon": "vk"
+      },
+      {
+        "href": "#",
+        "icon": "instagram"
+      },
+      {
+        "href": "#",
+        "icon": "facebook"
+      }
+    ]
+  },
+  "formSection": {
+    "title": "Профиль",
+    "btn": {
+      "label": "Сохранить изменения"
+    },
+    "formList": [
+      {
+        "title": "Данные профиля",
+        "inputList": [
+          {
+            "type": "text",
+            "name": "userName",
+            "id": "userName",
+            "placeholder": "имя",
+            "label": "Имя",
+            "required": true
+          },
+          {
+            "type": "text",
+            "name": "userEmail",
+            "id": "userEmail",
+            "placeholder": "почта",
+            "label": "почта",
+            "required": true
+          },
+          {
+            "type": "text",
+            "name": "userTel",
+            "id": "userTel",
+            "placeholder": "телефон",
+            "label": "телефон",
+            "required": true
+          },
+          {
+            "type": "text",
+            "name": "userAccountName",
+            "id": "userAccountName",
+            "placeholder": "Имя аккаунта",
+            "label": "Имя аккаунта",
+            "required": true
+          },
+          {
+            "type": "text",
+            "name": "userInstagramName",
+            "id": "userInstagramName",
+            "placeholder": "Профиль в инстаграм",
+            "label": "Профиль в инстаграм",
+            "required": true
+          },
+          {
+            "type": "text",
+            "name": "userAddress",
+            "id": "userAddress",
+            "placeholder": "Город, улица, дом",
+            "label": "Адрес доставки",
+            "required": true
+          }
+        ]
+      },
+      {
+        "title": "Изменить пароль",
+        "inputList": [
+          {
+            "type": "password",
+            "name": "userOldPass",
+            "id": "userOldPass",
+            "placeholder": "Старый пароль",
+            "label": "Старый пароль",
+            "required": true
+          },
+          {
+            "type": "password",
+            "name": "userNewPass",
+            "id": "userCurrentPass",
+            "placeholder": "Новый пароль",
+            "label": "Новый пароль",
+            "required": true
+          }
+        ]
+      }
+    ]
+  },
+  "offerSection": {
+    "title": ["Тренды", "сезона"],
+    "cardList": [
+      {
+        "chip": "Sale",
+        "href": "#",
+        "pic": {
+          "folder": "",
+          "name": "card_1",
+          "mq": [],
+          "fileType": "png"
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Акция! 1+1=3",
+        "href": "#",
+        "pic": {
+          "folder": "",
+          "name": "card_1",
+          "fileType": "png",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Sale",
+        "href": "#",
+        "pic": {
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Бесплатная доставка",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "sale",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      }
+    ],
+    "inLInk": {
+      "label": "Перейти в каталог",
+      "href": "#",
+      "icon": "arrow-circle"
+    }
+  }
+}

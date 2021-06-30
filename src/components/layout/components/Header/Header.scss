@@ -1,0 +1,51 @@
+.header {
+  grid-area: header;
+
+  @include _(
+    (
+      border-bottom: 1px solid $grey-2,
+    )
+  );
+
+  @include bem(
+    'container',
+    (
+      padding: (
+        'mob': 24px 22px 26px,
+      ),
+      display: flex,
+      align-items: center,
+    )
+  );
+
+  @include bem(
+    'logo',
+    (
+      '@wh': (
+        80px,
+        14px,
+      ),
+    )
+  );
+
+  @include bem(
+    'burger',
+    (
+      margin-left: 32px,
+    )
+  );
+
+  @include bem(
+    'btn-group',
+    (
+      margin-left: auto,
+    )
+  );
+
+  @include bem(
+    'nav',
+    (
+      display: none,
+    )
+  );
+}

@@ -1,0 +1,19 @@
+include /components/ui/Outer/Outer
+include /components/ui/Icon/Icon
+include OfferSlider/OfferSlider
+
+mixin OfferSection({ title, cardList, inLInk })
+  - const B = `offer-section`;
+
+  section(class=B id=B)&attributes(attributes)
+    +Container()(class=`${B}__container`)
+      h2(class=`${B}__title`)
+        each word, index in title
+          span(class=`${B}__title-word ${!index ? `${B}__title-word--first` : '' }`) #{ word } 
+    
+    +OfferSlider(cardList)(class=`${B}__slider`)
+
+    +Container()(class=`${B}__wrap-link`)
+      a(href=inLInk.href class=`${B}__in-link`)
+        span #{ inLInk.label }
+        +Icon(inLInk.icon)(class=`${B}__in-link-icon`)

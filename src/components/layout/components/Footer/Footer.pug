@@ -1,0 +1,9 @@
+include /components/ui/Outer/Outer
+include ./FooterSoc/FooterSoc
+include ../Logo/Logo
+
+mixin Footer({socList})
+  - const B = 'footer';
+  
+  +Outer(B, B, 'footer')
+    //- +FooterSoc(socList)(class=`${B}__soc-list`)

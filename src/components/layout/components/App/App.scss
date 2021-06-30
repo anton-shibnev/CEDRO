@@ -1,0 +1,12 @@
+#app.app {
+  @include _(
+    (
+      min-height: 100vh,
+           // display:
+           // // grid-template-are
+           // //   'mob': 'header' 'nav' 'main' 'foo
+           //
+           // grid-template-rows: auto auto 1fr ,
+    )
+  );
+}

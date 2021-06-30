@@ -1,0 +1,61 @@
+.offer-section {
+  $this: &;
+
+  @include _(
+    (
+      padding-top: (
+        63px,
+      ),
+    )
+  );
+
+  @include bem(
+    'title',
+    (
+      font-weight: 500,
+      font-size: 28px,
+      line-height: 32px,
+      text-transform: uppercase,
+      '& span:first-child': (
+        color: $primary,
+      ),
+    )
+  );
+
+  @include bem(
+    'slider',
+    (
+      margin-top: (
+        'mob': 32px,
+      ),
+      width: 100%,
+    )
+  );
+
+  @include bem(
+    'wrap-link',
+    (
+      margin-top: 32px,
+    )
+  );
+
+  @include bem(
+    'in-link',
+    (
+      display: flex,
+      align-items: center,
+      gap: 9px,
+      color: $dark,
+      font-weight: 500,
+      font-size: 16px,
+      line-height: 24px,
+    )
+  );
+
+  @include bem(
+    'in-link-icon',
+    (
+      '@wh': 16px,
+    )
+  );
+}

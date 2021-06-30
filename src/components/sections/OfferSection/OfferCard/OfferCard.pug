@@ -1,0 +1,20 @@
+include /components/ui/Icon/Icon
+include /components/ui/Pic/Pic
+
+mixin OfferCard({pic, href, chip, title, desc, volume, price })
+  - const B = `offer-card`;
+
+  article(class=B)&attributes(attributes)
+    a(href=href)(class=`${B}__spread-link`)
+    div(class=`${B}__chip`) #{ chip }
+    button(class=`${B}__like`)
+      +Icon('card-like')(class=`${B}__like-icon`)
+    +Pic(pic)(class=`${B}__pic`)
+    hr(class=`${B}__line`)
+    div(class=`${B}__data`)
+      h6(class=`${B}__title`) #{ title }
+      p(class=`${B}__desc`) #{ desc }
+      p(class=`${B}__volume`) #{ volume }
+      div(class=`${B}__wrap-price`)
+        span(class=`${B}__price ${B}__price--current`) #{ price.current }
+        span(class=`${B}__price ${B}__price--old`) #{ price.old }

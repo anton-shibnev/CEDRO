@@ -1,0 +1,51 @@
+.form {
+  $this: &;
+
+  @include _(
+    (
+      padding: 32px 0 37px,
+      position: relative,
+      '&::after': (
+        content: '',
+        width: (
+          'mob': calc(100% + 32px),
+        ),
+        height: 1px,
+        margin: (
+          'mob': 0 -16px,
+        ),
+        background-color: $grey-3,
+        position: absolute,
+        bottom: 0,
+      ),
+    )
+  );
+
+  @include bem(
+    'title',
+    (
+      font-weight: 500,
+      font-size: 20px,
+      line-height: 20px,
+    )
+  );
+
+  @include bem(
+    'list',
+    (
+      '@extend': '%list-reset',
+      display: flex,
+      flex-direction: column,
+      gap: (
+        'mob': 21px,
+      ),
+      margin-top: (
+        'mob': 33px,
+      ),
+    )
+  );
+
+  @include bem('item', ());
+
+  @include bem('input', ());
+}

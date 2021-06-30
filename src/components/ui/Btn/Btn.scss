@@ -1,0 +1,29 @@
+.btn {
+  @include _(
+    (
+      '@extend': '%btn-reset',
+      padding: (
+        'mob': 12px 12px,
+      ),
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      background-color: $dark,
+      color: $white,
+      font-weight: normal,
+      font-size: 16px,
+      line-height: 24px,
+      '@transition': (
+        background-color,
+        color,
+      ),
+      text-align: center,
+      border-radius: 4px,
+      '&--light': (
+        background-color: rgba($primary, 0),
+        color: $primary,
+        border: 2px solid $primary,
+      ),
+    )
+  );
+}

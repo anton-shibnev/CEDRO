@@ -1,0 +1,40 @@
+.btn-group {
+  $this: &;
+
+  @include _(
+    (
+      '@extend': '%list-reset',
+      display: flex,
+      gap: 18px,
+    )
+  );
+
+  @include bem(
+    'btn',
+    (
+      '@extend': '%btn-reset',
+    )
+  );
+
+  @include bem(
+    'btn',
+    (
+      display: flex,
+      align-items: center,
+      '@wh': (
+        'mob': 14px,
+      ),
+    )
+  );
+
+  @include bem(
+    'tel',
+    (
+      display: flex,
+      align-items: center,
+      '@wh': (
+        'mob': 14px,
+      ),
+    )
+  );
+}

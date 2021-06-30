@@ -1,0 +1,30 @@
+.form-section {
+  @include bem(
+    'container',
+    (
+      padding-top: (
+        'mob': 32px,
+      ),
+    )
+  );
+
+  @include bem(
+    'title',
+    (
+      font-weight: normal,
+      font-size: 35px,
+      line-height: 40px,
+      text-transform: uppercase,
+    )
+  );
+
+  @include bem(
+    'form-btn',
+    (
+      width: 100%,
+      margin-top: (
+        'mob': 33px,
+      ),
+    )
+  );
+}

@@ -1,0 +1,78 @@
+.input {
+  width: 100%;
+
+  @include bem(
+    'label',
+    (
+      font-weight: normal,
+      font-size: 16px,
+      line-height: 24px,
+      color: $grey-text,
+      '&::first-letter': (
+        text-transform: uppercase,
+      ),
+    )
+  );
+
+  @include bem(
+    'wrap-input',
+    (
+      margin-top: 10px,
+      position: relative,
+    )
+  );
+
+  @include bem(
+    'input',
+    (
+      font-weight: normal,
+      font-size: 16px,
+      line-height: 24px,
+      padding: (
+        'mob': 13px 16px 12px,
+      ),
+      width: 100%,
+      border: none,
+      background-color: $grey,
+      border-radius: 4px,
+      '@transition': (
+        border-color,
+      ),
+      '&::placeholder': (
+        color: $grey-text,
+        '@transition': (
+          'color',
+        ),
+      ),
+      '&:hover::placeholder': (
+        color: $dark,
+      ),
+    )
+  );
+
+  @include bem(
+    'eye',
+    (
+      '@extend': (
+        '%abs-center-y',
+        '%btn-reset',
+      ),
+      right: 10px,
+    )
+  );
+
+  @include bem(
+    'eye-icon',
+    (
+      '@wh': (
+        18px,
+      ),
+      transform: scale(0),
+      opacity: 0,
+      '@transition': (
+        'opacity',
+        'transform',
+      ),
+    )
+  );
+}

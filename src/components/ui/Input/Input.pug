@@ -1,0 +1,21 @@
+include /components/ui/Icon/Icon
+
+mixin Input({type='text', name, id, placeholder=false, label=false, required=true})
+  - const B = `input`;
+
+  div(class=`${B}`)&attributes(attributes)
+    if label
+      label(class=`${B}__label` for=id) #{ label }
+    div(class=`${B}__wrap-input`)
+      input(
+          class=`${B}__input`
+          placeholder=placeholder
+          type=type
+          name=name
+          id=id
+          required=required
+        )
+      if (type === 'password')
+        button(type='button' class=`${B}__eye`)
+          +Icon('eye--open')(class=`${B}__eye-icon ${B}__eye-icon--open`)
+          +Icon('eye--closed')(class=`${B}__eye-icon ${B}__eye-icon--closed`)
