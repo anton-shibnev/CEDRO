@@ -5,9 +5,7 @@
 # Node
 node_modules
 
-# Dist & test
-# dist
-dist
+# test
 test
 
 # BD, logs
