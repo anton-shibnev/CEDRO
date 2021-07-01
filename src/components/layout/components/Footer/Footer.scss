@@ -2,7 +2,7 @@
   grid-area: footer;
 
   $padding-y: (
-    'mob': 20px,
+    'mob': 25px,
   );
 
   @include _(
@@ -11,13 +11,220 @@
       padding-top: $padding-y,
       padding-bottom: $padding-y,
       background-color: $dark,
-      margin-top: 64px,
+      color: $white,
+      overflow: hidden,
+      grid-area: (
+        'lg': footer,
+      ),
     )
   );
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @include bem(
+    'row',
+    (
+      display: flex,
+      flex-direction: (
+        'mob': column,
+        'lg': row,
+      ),
+      gap: (
+        'lg': 32px,
+      ),
+      padding: (
+        'mob': 39px 0,
+        'lg': 32px 0,
+      ),
+      '&--first': (
+        padding-bottom: (
+          'lg': 54px,
+        ),
+      ),
+      '&--center': (
+        align-items: (
+          'lg': center,
+        ),
+      ),
+    )
+  );
+
+  @include bem(
+    'line',
+    (
+      background-color: rgba($white, 0.16),
+      height: 1px,
+      width: (
+        'lg': calc(100% + 160px),
+      ),
+      margin: 0 -80px,
+    )
+  );
+
+  @include bem(
+    'col',
+    (
+      flex: (
+        'lg': 1,
+      ),
+      '&:not(:last-child)': (
+        margin-bottom: (
+          'mob': 39px,
+          'lg': 0,
+        ),
+      ),
+      '&--end': (
+        display: (
+          'lg': flex,
+        ),
+        justify-content: (
+          'lg': flex-end,
+        ),
+      ),
+    )
+  );
+
+  @include bem(
+    'col-title',
+    (
+      '@extend': '%link-white',
+      font-weight: 500,
+      font-size: (
+        'mob': 20px,
+        'lg': 24px,
+      ),
+      line-height: 1,
+    )
+  );
+
+  @include bem(
+    'list',
+    (
+      '@extend': '%list-reset',
+      display: flex,
+      flex-direction: column,
+      gap: (
+        'mob': 8px,
+        'lg': 16px,
+      ),
+      margin-top: (
+        'mob': 17px,
+        'lg': 25px,
+      ),
+    )
+  );
+
+  @include bem(
+    'item-link',
+    (
+      '@extend': '%link-reset',
+      color: rgba($white, 0.8),
+      '&--icon': (
+        display: flex,
+        gap: 8px,
+      ),
+      '&:hover': (
+        color: rgba($white, 0.56),
+      ),
+      '&--icon:hover': (
+        color: $primary,
+      ),
+      '&--icon:hover svg *': (
+        stroke: $primary,
+      ),
+    )
+  );
+
+  @include bem(
+    'item-p',
+    (
+      color: rgba($white, 0.8),
+      '&--icon': (
+        display: flex,
+        gap: 8px,
+      ),
+    )
+  );
+
+  @include bem(
+    'item-label',
+    (
+      font-weight: normal,
+      font-size: 16px,
+      line-height: 24px,
+      white-space: pre,
+    )
+  );
+
+  @include bem(
+    'item-icon',
+    (
+      '@wh': 16px,
+      margin-top: 5px,
+    )
+  );
+
+  %small-text {
+    color: $white;
+    opacity: 0.4;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
   }
+
+  %small-text-link {
+    @extend %small-text;
+    transition: opacity $trs;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.72;
+    }
+  }
+
+  @include bem(
+    'copyright',
+    (
+      '@extend': '%small-text-link',
+      align-self: (
+        'lg': center,
+      ),
+      margin-top: (
+        'mob': 17px,
+        'lg': 0,
+      ),
+    )
+  );
+
+  @include bem(
+    'made-by',
+    (
+      margin-top: (
+        'mob': 17px,
+        'lg': 0,
+      ),
+      '@extend': '%small-text-link',
+      display: flex,
+      align-items: center,
+      gap: 9px,
+      margin-left: (
+        'lg': auto,
+      ),
+    )
+  );
+
+  @include bem(
+    'made-by-icon',
+    (
+      '@wh': (
+        13px,
+        17px,
+      ),
+    )
+  );
+
+  @include bem(
+    'fear',
+    (
+      '@extend': '%small-text',
+    )
+  );
 }

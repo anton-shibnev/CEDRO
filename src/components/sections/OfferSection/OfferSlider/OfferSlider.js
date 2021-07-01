@@ -6,9 +6,9 @@ import Swiper from 'swiper';
     slidesPerView: 1,
     spaceBetween: 8,
     breakpoints: {
-      1920: {
-        spaceBetween: 50,
-        slidesPerView: 3,
+      1280: {
+        spaceBetween: 32,
+        slidesPerView: 4,
       },
     },
   });

@@ -3,7 +3,8 @@ include /components/ui/Icon/Icon
 mixin FooterSoc(list)
   - const B = `footer-soc`;
 
-  div(class=`${B}`)&attributes(attributes)
+  ul(class=`${B}`)&attributes(attributes)
     each item in list
-      a(class=`${B}__item` href=item.href)
-        +Icon(item.icon)(class=`${B}__item-icon`)
+      li(class=`${B}__item`)
+        a(class=`${B}__item-link` href=item.href)
+          +Icon(item.icon)(class=`${B}__item-icon`)

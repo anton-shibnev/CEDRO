@@ -2,8 +2,43 @@ include /components/ui/Outer/Outer
 include ./FooterSoc/FooterSoc
 include ../Logo/Logo
 
-mixin Footer({socList})
+mixin Footer({ colList, socList, copyright, madeBy, fear })
   - const B = 'footer';
   
   +Outer(B, B, 'footer')
-    //- +FooterSoc(socList)(class=`${B}__soc-list`)
+    div(class=`${B}__row ${B}__row--first`)
+      each col in colList
+        div(class=`${B}__col`)
+          a(class=`${B}__col-title` href='#') #{ col.title }
+          ul(class=`${B}__list`)
+            each item in col.list
+              li(class=`${B}__list-item`)
+                if item.href
+                  a(href=item.href class=`${B}__item-link ${item.icon ? `${B}__item-link--icon` : ''}`)
+                    if item.icon
+                      +Icon(item.icon)(class=`${B}__item-icon`)
+                    span(class=`${B}__item-label`) #{ item.label } 
+                else
+                  p(class=`${B}__item-p ${item.icon ? `${B}__item-p--icon` : ''}`)
+                    if item.icon
+                      +Icon(item.icon)(class=`${B}__item-icon`)
+                    span(class=`${B}__item-label`) #{ item.label } 
+
+    hr(class=`${B}__line`)
+
+    div(class=`${B}__row ${B}__row--center`)
+      div(class=`${B}__col`)
+        +FooterSoc(socList)(class=`${B}__soc-list`)
+
+      div(class=`${B}__col`)
+        a(class=`${B}__copyright` href='#') #{ copyright }
+
+      div(class=`${B}__col ${B}__col--end`)
+        a(class=`${B}__made-by` href='#')
+          span(class=`${B}__made-by-label`) #{ madeBy.label }
+          +Icon(madeBy.icon)(class=`${B}__made-by-icon`)
+
+    hr(class=`${B}__line`)
+
+    div(class=`${B}__row`)
+      p(class=`${B}__fear`) #{ fear }

@@ -4,7 +4,33 @@
   @include _(
     (
       padding-top: (
-        63px,
+        'mob': 63px,
+        'lg': 113px,
+      ),
+      padding-bottom: (
+        'mob': 63px,
+        'lg': 124px,
+      ),
+      grid-area: (
+        'lg': offer,
+      ),
+      border-top: (
+        'lg': 1px solid $grey-3,
+      ),
+      display: (
+        'lg': grid,
+      ),
+      grid-template-areas: (
+        'lg': 'title link' 'slider slider',
+      ),
+    )
+  );
+
+  @include bem(
+    'wrap-title',
+    (
+      grid-area: (
+        'lg': title,
       ),
     )
   );
@@ -13,8 +39,14 @@
     'title',
     (
       font-weight: 500,
-      font-size: 28px,
-      line-height: 32px,
+      font-size: (
+        'mob': 28px,
+        'lg': 48px,
+      ),
+      line-height: (
+        'mob': 32px,
+        'lg': 56px,
+      ),
       text-transform: uppercase,
       '& span:first-child': (
         color: $primary,
@@ -27,21 +59,41 @@
     (
       margin-top: (
         'mob': 32px,
+        'lg': 50px,
       ),
       width: 100%,
+      grid-area: (
+        'lg': slider,
+      ),
     )
   );
 
   @include bem(
     'wrap-link',
     (
-      margin-top: 32px,
+      margin-top: (
+        'mob': 32px,
+        'lg': 0,
+      ),
+      grid-area: (
+        'lg': link,
+      ),
+      padding-left: (
+        'lg': 0,
+      ),
+      display: (
+        'lg': flex,
+      ),
+      justify-content: (
+        'lg': flex-end,
+      ),
     )
   );
 
   @include bem(
     'in-link',
     (
+      '@extend': '%link-dark',
       display: flex,
       align-items: center,
       gap: 9px,
@@ -49,6 +101,9 @@
       font-weight: 500,
       font-size: 16px,
       line-height: 24px,
+      '&:hover svg *': (
+        stroke: $primary,
+      ),
     )
   );
 

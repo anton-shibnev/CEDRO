@@ -3,11 +3,15 @@
 .offer-slider {
   $this: &;
 
+  $padding-x: (
+    'mob': 16px,
+    'lg': 80px,
+  );
   @include _(
     (
       overflow: hidden,
-      padding-left: 16px,
-      padding-right: 16px,
+      padding-left: $padding-x,
+      padding-right: $padding-x,
     )
   );
 
@@ -16,6 +20,7 @@
     (
       width: (
         'mob': 255px,
+        'lg': 100%,
       ),
     )
   );

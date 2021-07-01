@@ -1,4 +1,5 @@
 .header {
+  $this: &;
   grid-area: header;
 
   @include _(
@@ -12,6 +13,7 @@
     (
       padding: (
         'mob': 24px 22px 26px,
+        'lg': 20px 37px,
       ),
       display: flex,
       align-items: center,
@@ -31,7 +33,10 @@
   @include bem(
     'burger',
     (
-      margin-left: 32px,
+      margin-left: (
+        'mob': 32px,
+        'lg': 48px,
+      ),
     )
   );
 
@@ -45,7 +50,63 @@
   @include bem(
     'nav',
     (
-      display: none,
+      display: (
+        'mob': none,
+        'lg': flex,
+      ),
+      align-items: center,
+      margin-left: (
+        'lg': 112px,
+      ),
+    )
+  );
+
+  @include bem(
+    'list',
+    (
+      '@extend': '%list-reset',
+      display: flex,
+      align-items: center,
+      gap: 18px,
+      line-height: 0,
+    )
+  );
+
+  @include bem(
+    'item-link',
+    (
+      '@extend': '%link-reset',
+      display: flex,
+      align-items: center,
+      gap: 2px,
+      text-transform: uppercase,
+      font-weight: normal,
+      font-size: 14px,
+      line-height: 24px,
+      letter-spacing: 0.04em,
+      '@transition': color,
+      '&:hover': (
+        color: $primary,
+      ),
+      '&:hover #{$this}__item-icon *': (
+        stroke: $primary,
+      ),
+    )
+  );
+
+  &__item-link {
+    transition: color $trs;
+
+    * {
+      transition: stroke $trs;
+    }
+  }
+
+  @include bem(
+    'item-icon',
+    (
+      '@wh': 16px,
+      '@transition': stroke,
     )
   );
 }

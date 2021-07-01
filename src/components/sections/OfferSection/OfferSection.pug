@@ -6,7 +6,7 @@ mixin OfferSection({ title, cardList, inLInk })
   - const B = `offer-section`;
 
   section(class=B id=B)&attributes(attributes)
-    +Container()(class=`${B}__container`)
+    +Container()(class=`${B}__wrap-title`)
       h2(class=`${B}__title`)
         each word, index in title
           span(class=`${B}__title-word ${!index ? `${B}__title-word--first` : '' }`) #{ word } 

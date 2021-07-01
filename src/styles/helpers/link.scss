@@ -1,0 +1,53 @@
+%link-dark {
+  @extend %link-reset;
+
+  transition: color $trs;
+
+  * {
+    transition: stroke $trs, fill $trs;
+  }
+
+  &:hover {
+    color: $primary;
+
+    * {
+      color: $primary;
+    }
+  }
+}
+
+%link-primary {
+  @extend %link-reset;
+
+  transition: color $trs;
+
+  * {
+    transition: stroke $trs, fill $trs;
+  }
+
+  &:hover {
+    color: $dark;
+
+    * {
+      color: $dark;
+    }
+  }
+}
+
+%link-white {
+  @extend %link-reset;
+
+  transition: color $trs;
+
+  * {
+    transition: stroke $trs, fill $trs;
+  }
+
+  &:hover {
+    color: $primary;
+
+    * {
+      color: $primary;
+    }
+  }
+}

@@ -1,32 +1,20 @@
-.form {
+.form-item {
   $this: &;
 
-  @include _(
-    (
-      padding: 32px 0 37px,
-      position: relative,
-      '&::after': (
-        content: '',
-        width: (
-          'mob': calc(100% + 32px),
-        ),
-        height: 1px,
-        margin: (
-          'mob': 0 -16px,
-        ),
-        background-color: $grey-3,
-        position: absolute,
-        bottom: 0,
-      ),
-    )
-  );
+  @include _(());
 
   @include bem(
     'title',
     (
       font-weight: 500,
-      font-size: 20px,
-      line-height: 20px,
+      font-size: (
+        'mob': 20px,
+        'lg': 24px,
+      ),
+      line-height: (
+        'mob': 20px,
+        'lg': 24px,
+      ),
     )
   );
 
@@ -38,14 +26,19 @@
       flex-direction: column,
       gap: (
         'mob': 21px,
+        'lg': 24px,
       ),
       margin-top: (
         'mob': 33px,
+        'lg': 48px,
       ),
     )
   );
 
-  @include bem('item', ());
-
-  @include bem('input', ());
+  @include bem(
+    'input',
+    (
+      max-width: 544px,
+    )
+  );
 }

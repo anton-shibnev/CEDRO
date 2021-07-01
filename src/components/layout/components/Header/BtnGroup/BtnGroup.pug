@@ -6,7 +6,8 @@ mixin BtnGroup(list, tel)
   ul(class=`${B}` id=`${B}`)&attributes(attributes)
     li(class=`${B}__item ${B}__item--phone`)
       a(class=`${B}__tel` href=`tel:${tel.num}`)
-        +Icon(tel.icon)(class=`${B}__tel-icon`) #{ tel.num }
+        +Icon(tel.icon)(class=`${B}__tel-icon`)
+        span(class=`${B}__tel-label`) #{ tel.num }
 
     each item in list
       li(class=`${B}__item`)

@@ -29,31 +29,25 @@
     ],
     "nav": [
       {
-        "label": "О нас",
+        "label": "Пигменты",
+        "href": "#",
+        "dropdownList": true
+      },
+      {
+        "label": "ТОВАРЫ ДЛЯ ПМ",
+        "href": "#",
+        "dropdownList": true
+      },
+      {
+        "label": "Ремувер",
         "href": "#"
       },
       {
-        "label": "Галерея",
+        "label": "АКЦИИ",
         "href": "#"
       },
       {
-        "label": "Каталог",
-        "href": "#"
-      },
-      {
-        "label": "События",
-        "href": "#"
-      },
-      {
-        "label": "Издания",
-        "href": "#"
-      },
-      {
-        "label": "Проекты",
-        "href": "#"
-      },
-      {
-        "label": "Контакты",
+        "label": "ОБУЧЕНИЕ",
         "href": "#"
       }
     ],
@@ -68,6 +62,81 @@
     { "label": "выход", "href": "#", "mod": "exit" }
   ],
   "footer": {
+    "colList": [
+      {
+        "title": "Продукция",
+        "list": [
+          {
+            "label": "Пигменты",
+            "href": "#"
+          },
+          {
+            "label": "Пигменты",
+            "href": "#"
+          },
+          {
+            "label": "Аппараты",
+            "href": "#"
+          },
+          {
+            "label": "Иглы",
+            "href": "#"
+          },
+          {
+            "label": "Расходные материалы",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Компания",
+        "list": [
+          {
+            "label": "Блог",
+            "href": "#"
+          },
+          {
+            "label": "Обучение",
+            "href": "#"
+          },
+          {
+            "label": "Стать представителем",
+            "href": "#"
+          },
+          {
+            "label": "Контакты",
+            "href": "#"
+          },
+          {
+            "label": "Политика конфиденциальности",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Контакты",
+        "list": [
+          {
+            "label": "8 (800) 555-35-35",
+            "href": "tel:8 (800) 555-35-35",
+            "icon": "tel"
+          },
+          {
+            "label": "cedro@yandex.ru",
+            "href": "mailto:cedro@yandex.ru",
+            "icon": "email"
+          },
+          {
+            "label": "Время работы: пн - пт с 10 до 19 ",
+            "icon": "clock"
+          },
+          {
+            "label": "г. Санкт-Петербург, \nм. Звездная",
+            "icon": "anchor"
+          }
+        ]
+      }
+    ],
     "socList": [
       {
         "href": "#",
@@ -75,13 +144,19 @@
       },
       {
         "href": "#",
-        "icon": "instagram"
+        "icon": "facebook"
       },
       {
         "href": "#",
-        "icon": "facebook"
+        "icon": "instagram"
       }
-    ]
+    ],
+    "copyright": "© Cedro — все права защищены, 2020",
+    "madeBy": {
+      "label": "Сделано в Cedro",
+      "icon": "cedro"
+    },
+    "fear": "Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Для получения подробной информации о наличии и актуальной стоимости указанных на сайте услуг обращайтесь, пожалуйста, по телефонам клиник."
   },
   "formSection": {
     "title": "Профиль",
@@ -96,8 +171,8 @@
             "type": "text",
             "name": "userName",
             "id": "userName",
-            "placeholder": "имя",
-            "label": "Имя",
+            "placeholder": "ФИО",
+            "label": "ФИО",
             "required": true
           },
           {
@@ -206,6 +281,177 @@
         "chip": "Sale",
         "href": "#",
         "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Бесплатная доставка",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Бесплатная доставка",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Бесплатная доставка",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Бесплатная доставка",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Бесплатная доставка",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Бесплатная доставка",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Бесплатная доставка",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Бесплатная доставка",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Бесплатная доставка",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
+          "folder": "",
+          "name": "card_1",
+          "mq": []
+        },
+        "title": "Brown to Blonde",
+        "desc": "Пигмент для бровей",
+        "volume": "12 ml.",
+        "price": {
+          "current": "1 500 ₽",
+          "old": "3 000 ₽"
+        }
+      },
+      {
+        "chip": "Бесплатная доставка",
+        "href": "#",
+        "pic": {
+          "fileType": "png",
           "folder": "",
           "name": "card_1",
           "mq": []

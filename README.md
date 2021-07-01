@@ -1,11 +1,14 @@
-# Webpack Boilerplate
+# CEDRO TEST
 
 ## Clone the repo and install dependencies
+
 ```bash
-git clone https://github.com/shibnev/webpack-boilerplate.git
-cd webpack-boilerplate
+git clone https://github.com/shibnev/CEDRO.git
+cd CEDRO
 npm i
+or yarn
 ```
+
 ## Usage
 
 ### Development server

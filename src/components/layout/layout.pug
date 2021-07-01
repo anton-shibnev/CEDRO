@@ -1,10 +1,11 @@
 - const DATA = self.htmlWebpackPlugin.options.DATA;
 
 include components/App/App
-include components/Main/Main
 include components/Header/Header
 include components/Nav/Nav
 include components/Footer/Footer
+include /components/sections/FormSection/FormSection
+include /components/sections/OfferSection/OfferSection
 
 doctype html
 html(lang='ru' dir='ltr')
@@ -18,5 +19,6 @@ html(lang='ru' dir='ltr')
   +App()
     +Header(DATA.header)
     +Nav(DATA.nav)
-    +Main()
+    +FormSection(DATA.formSection)
+    +OfferSection(DATA.offerSection)
     +Footer(DATA.footer)

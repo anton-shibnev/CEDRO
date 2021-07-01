@@ -1,7 +1,7 @@
 include /components/ui/Input/Input
 
 mixin FormItem({title, inputList})
-  - const B = `form`;
+  - const B = `form-item`;
 
   div(class=`${B}`)&attributes(attributes)
     h3(class=`${B}__title`) #{ title }
@@ -9,4 +9,4 @@ mixin FormItem({title, inputList})
     ul(class=`${B}__list`)
       each item in inputList
         li(class=`${B}__item`)
-          +Input(item)
+          +Input(item)(class=`${B}__input`)

@@ -11,4 +11,5 @@ mixin FormSection({ title, formList, btn })
     form(class=`${B}__form`)
       each form in formList
         +FormItem(form)(class=`${B}__form-item`)
-      +Btn(btn)(class=`${B}__form-btn`)
+      div(class=`${B}__form-item ${B}__form-item--btn`)
+        +Btn(btn)(class=`${B}__btn`)

@@ -15,22 +15,22 @@
       flex-direction: column,
       position: relative,
       z-index: 120,
+      '&:after': (
+        content: '',
+        '@extend': '%abs-center',
+        '@wh': 150%,
+      ),
+      '&:hover #{$this}__line': (
+        background-color: $primary,
+      ),
+      '&:hover #{$this}__line:first-child': (
+        transform: translateY(-1px),
+      ),
+      '&:hover #{$this}__line:last-child': (
+        transform: translateY(1px),
+      ),
     )
   );
-
-  &--active {
-    #{$this}__line {
-      width: 100% !important;
-
-      &:nth-child(1) {
-        transform: rotate(-135deg) translate(-15%, -300%);
-      }
-
-      &:nth-child(2) {
-        transform: rotate(135deg) translate(-15%, 300%);
-      }
-    }
-  }
 
   @include bem(
     'line',

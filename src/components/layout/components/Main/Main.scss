@@ -1,4 +1,10 @@
 .main {
-  position: relative;
-  grid-area: main;
+  @include _(
+    (
+      position: relative,
+      grid-area: (
+        'lg': main,
+      ),
+    )
+  );
 }

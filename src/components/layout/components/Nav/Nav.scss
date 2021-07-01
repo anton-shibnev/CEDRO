@@ -3,7 +3,24 @@
 
   @include _(
     (
-      border-bottom: 1px solid $grey-2,
+      border-bottom: (
+        'mob': 1px solid $grey-2,
+        'lg': none,
+      ),
+      border-right: (
+        'lg': 1px solid $grey-2,
+      ),
+      grid-area: (
+        'lg': nav,
+      ),
+      padding-top: (
+        'mob': 7px,
+        'lg': 108px,
+      ),
+      padding-bottom: (
+        'mob': 8px,
+        'lg': 108px,
+      ),
     )
   );
 
@@ -12,12 +29,12 @@
     (
       '@extend': '%list-reset',
       display: flex,
-      gap: 16px,
-      padding-top: (
-        'mob': 7px,
+      flex-direction: (
+        'lg': column,
       ),
-      padding-bottom: (
-        'mob': 8px,
+      gap: (
+        'mob': 16px,
+        'lg': 6px,
       ),
     )
   );
@@ -28,6 +45,7 @@
       '&--exit': (
         margin-left: (
           'mob': auto,
+          'lg': 0,
         ),
       ),
     )
@@ -36,6 +54,7 @@
   @include bem(
     'item-link',
     (
+      '@extend': '%link-dark',
       text-transform: uppercase,
       font-weight: 500,
       font-size: 14px,

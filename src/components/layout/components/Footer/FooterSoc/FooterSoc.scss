@@ -1,22 +1,35 @@
 .footer-soc {
   $this: &;
 
-  @include flex-gap(
+  @include _(
     (
-      'mob': 30px,
+      '@extend': '%list-reset',
+      display: flex,
+      gap: 8px,
     )
   );
-  justify-content: center;
 
-  &__item {
-    display: block;
-  }
+  @include bem(
+    'item-link',
+    (
+      '@circle': 32px,
+      border: 1px solid rgba($white, 0.16),
+      background-color: rgba($white, 0.08),
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      transition: border $trs,
+      backdrop-filter: blur(24px),
+      '&:hover': (
+        border: 1px solid $primary,
+      ),
+    )
+  );
 
-  &__item-icon {
-    @include svg-icon(50px);
-
-    * {
-      fill: $primary;
-    }
-  }
+  @include bem(
+    'item-icon',
+    (
+      '@wh': 15px,
+    )
+  );
 }

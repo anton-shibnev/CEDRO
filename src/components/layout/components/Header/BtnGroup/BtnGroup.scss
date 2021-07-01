@@ -5,6 +5,7 @@
     (
       '@extend': '%list-reset',
       display: flex,
+      align-items: center,
       gap: 18px,
     )
   );
@@ -13,16 +14,13 @@
     'btn',
     (
       '@extend': '%btn-reset',
-    )
-  );
-
-  @include bem(
-    'btn',
-    (
       display: flex,
       align-items: center,
       '@wh': (
         'mob': 14px,
+      ),
+      '&:hover #{$this}__btn-icon path': (
+        stroke: $dark,
       ),
     )
   );
@@ -30,10 +28,60 @@
   @include bem(
     'tel',
     (
+      '@extend': '%link-primary',
+      color: $primary,
       display: flex,
       align-items: center,
+      margin-right: (
+        'lg': 24px,
+      ),
+      gap: (
+        'lg': 10px,
+      ),
+      '&:hover #{$this}__tel-icon path': (
+        stroke: $dark,
+      ),
+      '@transition': color,
+    )
+  );
+
+  @include bem(
+    'btn-icon',
+    (
+      '& *': (
+        '@transition': (
+          stroke,
+        ),
+      ),
+    )
+  );
+
+  @include bem(
+    'tel-label',
+    (
+      font-weight: 500,
+      font-size: 14px,
+      line-height: 24px,
+      letter-spacing: 0.04em,
+      display: (
+        'mob': none,
+        'lg': inline,
+      ),
+      '@transition': color,
+    )
+  );
+
+  @include bem(
+    'tel-icon',
+    (
       '@wh': (
         'mob': 14px,
+      ),
+      '& *': (
+        stroke: $primary,
+        '@transition': (
+          stroke,
+        ),
       ),
     )
   );

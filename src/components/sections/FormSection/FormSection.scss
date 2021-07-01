@@ -1,9 +1,21 @@
 .form-section {
+  grid-area: form;
+
   @include bem(
     'container',
     (
       padding-top: (
         'mob': 32px,
+        'lg': 111px,
+      ),
+      padding-bottom: (
+        'lg': 31px,
+      ),
+      padding-left: (
+        'lg': 96px,
+      ),
+      padding-right: (
+        'lg': 96px,
       ),
     )
   );
@@ -12,18 +24,67 @@
     'title',
     (
       font-weight: normal,
-      font-size: 35px,
-      line-height: 40px,
+      font-size: (
+        'mob': 35px,
+        'lg': 80px,
+      ),
+      line-height: (
+        'mob': 40px,
+        'lg': 80px,
+      ),
       text-transform: uppercase,
     )
   );
 
   @include bem(
-    'form-btn',
+    'form',
     (
-      width: 100%,
+      margin-top: (
+        'lg': 81px,
+      ),
+    )
+  );
+
+  @include bem(
+    'form-item',
+    (
+      position: relative,
+      padding: (
+        'mob': 32px 0 37px,
+        'lg': 80px 0 81px,
+      ),
+      '&--btn': (),
+      '&::after': (
+        content: '',
+        width: (
+          'mob': calc(100% + 32px),
+          'lg': calc(100% + 192px),
+        ),
+        height: 1px,
+        margin: (
+          'mob': 0 -16px,
+          'lg': 0 -96px,
+        ),
+        background-color: $grey-3,
+        position: absolute,
+        bottom: (
+          'mob': 0,
+          'lg': 100%,
+        ),
+      ),
+    )
+  );
+
+  @include bem(
+    'btn',
+    (
+      width: (
+        'mob': 100%,
+        'lg': auto,
+      ),
       margin-top: (
         'mob': 33px,
+        'lg': 0,
       ),
     )
   );
