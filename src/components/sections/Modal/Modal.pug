@@ -1,0 +1,9 @@
+include /components/ui/Container/Container
+include /components/layout/components/DataRow/DataRow
+
+mixin Modal(colList)
+  - const B = `modal`;
+
+  div(class=B id=B)
+    +Container(class=`${B}__container`)
+      +DataRow(colList)(class=`${B}__row ${B}__row--first`)

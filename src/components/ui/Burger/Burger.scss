@@ -29,6 +29,9 @@
       '&:hover #{$this}__line:last-child': (
         transform: translateY(1px),
       ),
+      '&:focus': (
+        outline: none,
+      ),
     )
   );
 
@@ -50,4 +53,18 @@
       ),
     )
   );
+
+  &--active {
+    #{$this}__line {
+      background-color: $dark !important;
+
+      &:nth-child(1) {
+        transform: rotate(-135deg) translate(-20%, -20%) !important;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(135deg) translate(-20%, 20%) !important;
+      }
+    }
+  }
 }

@@ -5,8 +5,9 @@ include /components/ui/Outer/Outer
 include ../Logo/Logo
 include ./BtnGroup/BtnGroup
 include /components/ui/Burger/Burger
+include /components/sections/Modal/Modal
 
-mixin Header({ nav, btnGroup, tel })
+mixin Header({ nav, btnGroup, tel }, colList)
   - const B = 'header';
 
   +Outer(B,B, 'header')
@@ -25,5 +26,6 @@ mixin Header({ nav, btnGroup, tel })
     +BtnGroup(btnGroup, tel)(class=`${B}__btn-group`)
 
     +Burger('burger')(class=`${B}__burger`)
+    +Modal(colList)
 
 

@@ -1,0 +1,22 @@
+.modal {
+  $this: &;
+
+  background-color: $white;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transform: translateY(-100%);
+  transition: transform $trs;
+  color: $dark;
+
+  &--active {
+    transform: translateY(0);
+  }
+
+  &__container {
+    overflow-y: scroll;
+  }
+}

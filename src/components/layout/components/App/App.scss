@@ -11,6 +11,9 @@
       grid-template-columns: (
         'lg': 0.27fr 1fr,
       ),
+      '&--no-scroll': (
+        overflow: hidden,
+      ),
     )
   );
 }

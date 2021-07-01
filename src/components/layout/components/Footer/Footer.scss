@@ -82,85 +82,85 @@
     )
   );
 
-  @include bem(
-    'col-title',
-    (
-      '@extend': '%link-white',
-      font-weight: 500,
-      font-size: (
-        'mob': 20px,
-        'lg': 24px,
-      ),
-      line-height: 1,
-    )
-  );
+  // @include bem(
+  //   'col-title',
+  //   (
+  //     '@extend': '%link-white',
+  //     font-weight: 500,
+  //     font-size: (
+  //       'mob': 20px,
+  //       'lg': 24px,
+  //     ),
+  //     line-height: 1,
+  //   )
+  // );
 
-  @include bem(
-    'list',
-    (
-      '@extend': '%list-reset',
-      display: flex,
-      flex-direction: column,
-      gap: (
-        'mob': 8px,
-        'lg': 16px,
-      ),
-      margin-top: (
-        'mob': 17px,
-        'lg': 25px,
-      ),
-    )
-  );
+  // @include bem(
+  //   'list',
+  //   (
+  //     '@extend': '%list-reset',
+  //     display: flex,
+  //     flex-direction: column,
+  //     gap: (
+  //       'mob': 8px,
+  //       'lg': 16px,
+  //     ),
+  //     margin-top: (
+  //       'mob': 17px,
+  //       'lg': 25px,
+  //     ),
+  //   )
+  // );
 
-  @include bem(
-    'item-link',
-    (
-      '@extend': '%link-reset',
-      color: rgba($white, 0.8),
-      '&--icon': (
-        display: flex,
-        gap: 8px,
-      ),
-      '&:hover': (
-        color: rgba($white, 0.56),
-      ),
-      '&--icon:hover': (
-        color: $primary,
-      ),
-      '&--icon:hover svg *': (
-        stroke: $primary,
-      ),
-    )
-  );
+  // @include bem(
+  //   'item-link',
+  //   (
+  //     '@extend': '%link-reset',
+  //     color: rgba($white, 0.8),
+  //     '&--icon': (
+  //       display: flex,
+  //       gap: 8px,
+  //     ),
+  //     '&:hover': (
+  //       color: rgba($white, 0.56),
+  //     ),
+  //     '&--icon:hover': (
+  //       color: $primary,
+  //     ),
+  //     '&--icon:hover svg *': (
+  //       stroke: $primary,
+  //     ),
+  //   )
+  // );
 
-  @include bem(
-    'item-p',
-    (
-      color: rgba($white, 0.8),
-      '&--icon': (
-        display: flex,
-        gap: 8px,
-      ),
-    )
-  );
+  // @include bem(
+  //   'item-p',
+  //   (
+  //     color: rgba($white, 0.8),
+  //     '&--icon': (
+  //       display: flex,
+  //       gap: 8px,
+  //     ),
+  //   )
+  // );
 
-  @include bem(
-    'item-label',
-    (
-      font-weight: normal,
-      font-size: 16px,
-      line-height: 24px,
-      white-space: pre,
-    )
-  );
+  // @include bem(
+  //   'item-label',
+  //   (
+  //     font-weight: normal,
+  //     font-size: 16px,
+  //     line-height: 24px,
+  //     white-space: pre,
+  //   )
+  // );
 
-  @include bem(
-    'item-icon',
-    (
-      '@wh': 16px,
-      margin-top: 5px,
-    )
-  );
+  // @include bem(
+  //   'item-icon',
+  //   (
+  //     '@wh': 16px,
+  //     margin-top: 5px,
+  //   )
+  // );
 
   %small-text {
     color: $white;
