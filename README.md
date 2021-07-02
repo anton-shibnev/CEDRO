@@ -2,7 +2,7 @@
 
 ## Clone the repo and install dependencies
 
-### [GH Page](https://github.com/shibnev/CEDRO/dist/index.html)
+### [GH Page](https://shibnev.github.io/CEDRO/dist/index.html)
 
 ```bash
 git clone https://github.com/shibnev/CEDRO.git
