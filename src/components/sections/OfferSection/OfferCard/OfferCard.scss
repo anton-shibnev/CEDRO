@@ -10,6 +10,8 @@
       height: 403px,
       border: 1px solid rgba($dark, 0),
       transition: border $trs,
+      display: flex,
+      flex-direction: column,
       '&:hover': (
         border: 1px solid rgba($dark, 1),
       ),
@@ -85,7 +87,8 @@
   @include bem(
     'pic',
     (
-      width: 100%,
+      width: auto,
+      margin: 0 auto,
       height: (
         'mob': 255px,
         'lg': 253px,
@@ -100,6 +103,7 @@
       height: 12px !important,
       background-color: $secondary,
       opacity: 1,
+      flex-shrink: 0,
     )
   );
 

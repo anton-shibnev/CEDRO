@@ -1,7 +1,7 @@
-export const toggleClassInput = (el, input) => {
+export const toggleClassInput = (input, el) => {
   if (input.value.length > 0) {
-    el.classList.add('on');
+    el.classList.add('input__eye--active');
   } else {
-    el.classList.remove('on');
+    el.classList.remove('input__eye--active');
   }
 };

@@ -14,6 +14,28 @@
     )
   );
 
+  &--dark {
+    #{$this}__item-label {
+      color: rgba(33, 36, 46, 0.8);
+    }
+
+    #{$this}__item-link {
+      color: rgba(33, 36, 46, 0.8);
+
+      &:hover {
+        color: $dark;
+
+        #{$this}__item-icon * {
+          stroke: $dark;
+        }
+      }
+    }
+
+    #{$this}__item-icon * {
+      stroke: $dark;
+    }
+  }
+
   @include bem(
     'col',
     (

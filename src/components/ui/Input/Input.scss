@@ -57,25 +57,39 @@
   @include bem(
     'eye',
     (
-      '@extend': (
-        '%abs-center-y',
-        '%btn-reset',
+      '@wh': (
+        25px,
       ),
+      '@extend': '%btn-reset',
       right: 10px,
+      position: absolute,
+      top: 50%,
+      transform: translateY(-50%) scale(0),
+      opacity: 0,
+      transition: $trs,
+      display: flex,
+      justify-content: center,
+      align-items: center,
+      '&--active': (
+        opacity: 1,
+        transform: translateY(-50%) scale(1),
+      ),
     )
   );
 
   @include bem(
     'eye-icon',
     (
+      '@extend': '%abs-center',
       '@wh': (
         18px,
       ),
-      transform: scale(0),
+      transform: translate(-50%, -50%) scale(0),
       opacity: 0,
-      '@transition': (
-        'opacity',
-        'transform',
+      transition: $trs,
+      '&--active': (
+        opacity: 1 !important,
+        transform: translate(-50%, -50%) scale(1) !important,
       ),
     )
   );

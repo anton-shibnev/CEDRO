@@ -8,23 +8,6 @@ mixin Footer({ colList, socList, copyright, madeBy, fear })
   
   +Outer(B, B, 'footer')
     +DataRow(colList)(class=`${B}__row ${B}__row--first`)
-    //- div(class=`${B}__row ${B}__row--first`)
-    //-   each col in colList
-    //-     div(class=`${B}__col`)
-    //-       a(class=`${B}__col-title` href='#') #{ col.title }
-    //-       ul(class=`${B}__list`)
-    //-         each item in col.list
-    //-           li(class=`${B}__list-item`)
-    //-             if item.href
-    //-               a(href=item.href class=`${B}__item-link ${item.icon ? `${B}__item-link--icon` : ''}`)
-    //-                 if item.icon
-    //-                   +Icon(item.icon)(class=`${B}__item-icon`)
-    //-                 span(class=`${B}__item-label`) #{ item.label } 
-    //-             else
-    //-               p(class=`${B}__item-p ${item.icon ? `${B}__item-p--icon` : ''}`)
-    //-                 if item.icon
-    //-                   +Icon(item.icon)(class=`${B}__item-icon`)
-    //-                 span(class=`${B}__item-label`) #{ item.label } 
 
     hr(class=`${B}__line`)
 

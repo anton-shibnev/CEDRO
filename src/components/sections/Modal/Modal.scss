@@ -16,7 +16,20 @@
     transform: translateY(0);
   }
 
-  &__container {
-    overflow-y: scroll;
-  }
+  @include bem(
+    'container',
+    (
+      overflow-y: scroll,
+      min-height: 100%,
+      display: (
+        'lg': flex,
+      ),
+      flex-direction: (
+        'lg': column,
+      ),
+      justify-content: (
+        'lg': center,
+      ),
+    )
+  );
 }
